@@ -9,7 +9,7 @@ public class ReadingFile {
     public static final ArrayList<String> originalText = new ArrayList<>();
     public static void createFilePath () {
         String originalTextLine = "";
-        try (BufferedReader reader = new BufferedReader(new FileReader(Constants.inputFileName))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Constants.setInputFileName()))) {
             while (reader.ready()) {
                 originalTextLine = reader.readLine();
                 originalText.add(originalTextLine);

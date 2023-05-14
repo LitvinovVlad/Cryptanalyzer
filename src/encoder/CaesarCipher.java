@@ -1,11 +1,13 @@
 package encoder;
 
-import java.io.*;
-import java.util.ArrayList;
-
-import constants.*;
-import alhabet.*;
+import alhabet.AllSymbols;
+import constants.Constants;
 import files.WritingFile;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class CaesarCipher {
     static String inputFileName;
@@ -16,7 +18,7 @@ public class CaesarCipher {
 
     public static void startProgram() {
         System.out.println(Constants.fileName);
-        inputFileName = Constants.inputFileName;
+        inputFileName = Constants.setInputFileName();
         createFilePath();
     }
 

@@ -15,7 +15,7 @@ public class BruteForce {
 
     public static void startProgram(){
         System.out.println(Constants.fileName);
-        inputFileName = Constants.inputFileName;
+        inputFileName = Constants.setInputFileName();
         createFile();
     }
         public static void createFile() {

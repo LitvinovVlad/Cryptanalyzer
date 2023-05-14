@@ -20,13 +20,13 @@ public class Decryption {
         System.out.println(Constants.numKey);
         key = Integer.parseInt(new Scanner(System.in).nextLine());
         System.out.println(Constants.fileName);
-        inputFileName = Constants.inputFileName;
+        inputFileName = Constants.setInputFileName();
         createFilePath();
     }
 
         public static void createFilePath() {
 
-            try (BufferedReader reader = new BufferedReader(new FileReader(Constants.inputFileName))) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName))) {
                 while (reader.ready()) {
                     line2 = new StringBuilder();
                     line = reader.readLine();
